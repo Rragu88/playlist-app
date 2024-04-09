@@ -1,9 +1,12 @@
+import { useDispatch } from "react-redux";
 import MoviePlaylist from "./components/MoviePlaylist.jsx";
 import SongPlaylist from "./components/SongPlaylist";
+import { reset } from "./store/index.jsx";
 
 export default function App() {
+    const dispatch = useDispatch();
     const handleResetClick = () => {
-        //
+        dispatch(reset());
     };
 
     return (
